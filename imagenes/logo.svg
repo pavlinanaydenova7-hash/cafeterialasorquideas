@@ -1,0 +1,45 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .cup-body { fill: #FF0000; } /* Rojo brillante */
+      .coffee { fill: #6F4E37; } /* Color café */
+      .orchid-flower { fill: #FF69B4; } /* Rosa brillante */
+      .orchid-outline { fill: none; stroke: white; stroke-width: 8; stroke-linejoin: round; stroke-linecap: round; }
+      .stem { fill: #228B22; } /* Verde */
+      .steam { fill: none; stroke: #B0C4DE; stroke-width: 2; stroke-linecap: round; }
+      .text { font-family: 'Playfair Display', serif; text-anchor: middle; }
+      .main-text { font-size: 24px; font-weight: bold; fill: #333; }
+      .sub-text { font-size: 16px; fill: #8B0000; font-weight: bold; } /* Rojo oscuro */
+    </style>
+  </defs>
+
+  <g transform="translate(0, -10)">
+    <!-- Taza más pequeña -->
+    <path class="cup-body" d="M 50 50 C 50 40, 110 40, 110 50 L 100 100 C 100 110, 60 110, 60 100 Z" />
+    
+    <!-- Asa de la taza con hueco -->
+    <path class="cup-body" d="M 110 60 C 125 60, 125 90, 110 90 M 110 68 C 120 68, 120 82, 110 82" fill-rule="evenodd"/>
+
+    <!-- Café dentro de la taza -->
+    <ellipse class="coffee" cx="80" cy="50" rx="30" ry="8"/>
+
+    <!-- Vapor del café -->
+    <path class="steam" d="M 70 30 C 75 20, 85 20, 90 30" />
+    <path class="steam" d="M 80 25 C 85 15, 95 15, 100 25" />
+
+    <!-- Orquídea con 5 curvas -->
+    <g transform="translate(80, 70) scale(0.45)">
+        <!-- Contorno blanco más grueso -->
+        <path class="orchid-outline" d="M50,25 C30,15 10,40 25,65 C10,85 30,115 50,95 C70,115 90,85 75,65 C90,40 70,15 50,25 Z"/>
+        <!-- Flor de la orquídea -->
+        <path class="orchid-flower" d="M50,25 C30,15 10,40 25,65 C10,85 30,115 50,95 C70,115 90,85 75,65 C90,40 70,15 50,25 Z"/>
+        <!-- Tallo verde -->
+        <rect class="stem" x="48" y="90" width="4" height="20" />
+    </g>
+  </g>
+
+  <!-- Texto -->
+  <text x="100" y="150" class="text main-text">Las Orquídeas</text>
+  <text x="100" y="175" class="text sub-text">Cafetería en Estepona</text>
+</svg>
+

@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #FF8C00; /* Naranja oscuro */
+    --secondary-color: #FFD700; /* Amarillo dorado */
+    --accent-color: #FF1493; /* Fucsia */
+    --text-color: #333;
+    --bg-color: #FFF8E1; /* Crema claro */
+    --forest-green: #228B22;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    color: var(--forest-green) !important;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-color);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline-warning {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-outline-warning:hover {
+    color: #fff;
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background: linear-gradient(to right, var(--forest-green), #1a681a);
+}
+
+footer .text-white {
+    transition: color 0.3s;
+}
+
+footer .text-white:hover {
+    color: var(--secondary-color) !important;
+}
+
+#cookie-banner {
+    background-color: var(--forest-green);
+    color: white;
+    border-top: 2px solid var(--secondary-color);
+}
+
+/* Estilos para la página Sobre Nosotros */
+.team-img {
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Estilos para la página de Servicios */
+.service-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card .card-body {
+    background-color: white;
+}
+
+.service-card .card-title {
+    color: var(--primary-color);
+}
+
+/* Estilos para la página de Contacto */
+#map {
+    height: 400px;
+    border-radius: 15px;
+    border: 3px solid var(--primary-color);
+}
