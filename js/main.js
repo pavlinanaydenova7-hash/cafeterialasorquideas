@@ -18,15 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
         // Si venimos de la página de configuración, ocultar el banner
         if (sessionStorage.getItem('hideCookieBanner')) {
             hideCookieBanner();
-            sessionStorage.removeItem('hideCookieBanner'); // Limpiar para futuras navegaciones
+            sessionStorage.removeItem('hideCookieBanner'); // limpiar para futuras navegaciones
         }
 
-        // Mostrar el banner solo si no se ha establecido ninguna preferencia de cookies
-        if (!localStorage.getItem('cookiePreference')) {
+        // ✅ Mostrar el banner solo si no hay preferencia guardada
+        const userPreference = localStorage.getItem('cookiePreference');
+
+        if (!userPreference) {
             cookieBanner.style.display = 'block';
+        } else {
+            hideCookieBanner(); // 👈 si ya aceptó, rechazó o configuró, no mostrar
         }
 
-        // Handle 'Más información' link
+        // "Más información"
         if (moreInfoLink) {
             moreInfoLink.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -34,14 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Handle 'Configurar' button
+        // "Configurar" button
         if (configButton) {
             configButton.addEventListener('click', function() {
                 window.location.href = 'configurar-cookies.html';
             });
         }
 
-        // Handle 'Aceptar todas' button
+        // "Aceptar todas"
         if (acceptButton) {
             acceptButton.addEventListener('click', function() {
                 hideCookieBanner();
@@ -49,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Handle 'Rechazar todas' button
+        // "Rechazar todas"
         if (rejectButton) {
             rejectButton.addEventListener('click', function() {
                 hideCookieBanner();
@@ -58,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Lógica para el botón de configuración de cookies en el footer
+    // Lógica para el enlace de configuración en el footer
     const cookieSettings = document.getElementById('cookie-settings');
     if (cookieSettings) {
         cookieSettings.addEventListener('click', function(e) {

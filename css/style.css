@@ -99,49 +99,46 @@ footer .text-white:hover {
     color: var(--secondary-color) !important;
 }
 
-#cookie-banner {
-    background-color: var(--forest-green);
-    color: white;
-    border-top: 2px solid var(--secondary-color);
-}
-
 /* Estilos para el banner de cookies */
-.cookie-banner {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    z-index: 1000;
-    font-size: 14px;
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--forest-green);
+  color: white;
+  border-top: 2px solid var(--secondary-color);
+  text-align: center;
+  padding: 15px;
+  z-index: 1050;
+  font-size: 14px;
+  display: none; /* oculto por defecto hasta que main.js lo muestre */
 }
 
-.cookie-banner a {
-    color: #FFD700;
-    text-decoration: underline;
-    cursor: pointer;
+#cookie-banner a {
+  color: var(--secondary-color);
+  text-decoration: underline;
 }
 
 .cookie-buttons {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .cookie-btn {
-    background-color: #FF8C00;
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 .cookie-btn:hover {
-    background-color: #FF4500;
+  background-color: #FF4500;
 }
+
 
 /* Estilos para la página Sobre Nosotros */
 .team-img {
