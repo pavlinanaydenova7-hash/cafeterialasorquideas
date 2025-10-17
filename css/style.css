@@ -64,6 +64,16 @@ body {
     border-radius: 10px;
     padding: 20px;
 }
+/* Ajustes para que el texto del carrusel se vea bien en móviles */
+@media (max-width: 767px) {
+    .carousel-caption {
+        padding: 10px;
+        bottom: 10px; /* Sube un poco el texto para que no quede tan abajo */
+    }
+    .carousel-caption h5 {
+        font-size: 1.1rem; /* Reduce el tamaño del título */
+    }
+}
 
 .btn-primary {
     background-color: var(--primary-color);
