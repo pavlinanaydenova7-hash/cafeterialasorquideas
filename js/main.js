@@ -81,6 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!cookiePreference && !sessionStorage.getItem('hideCookieBanner')) {
             cookieBanner.style.display = 'block';
+            // Mueve el foco al banner para mejorar la accesibilidad
+            setTimeout(() => {
+                cookieBanner.focus();
+            }, 100);
         }
 
         acceptCookies.addEventListener('click', () => {
