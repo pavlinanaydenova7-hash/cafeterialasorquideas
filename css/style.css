@@ -35,8 +35,9 @@ body {
     transition: color 0.3s;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover, .nav-link.active, .nav-link:focus-visible {
     color: var(--primary-darker) !important;
+    outline: none; /* Quitamos el outline por defecto para usar el nuestro */
 }
 
 .nav-link::after {
@@ -51,7 +52,7 @@ body {
     transition: width 0.3s;
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after, .nav-link.active::after, .nav-link:focus-visible::after {
     width: 100%;
 }
 
@@ -85,10 +86,11 @@ body {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus-visible {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
     transform: translateY(-2px);
+    outline: 2px solid var(--accent-color); /* Añadimos un outline visible */
 }
 
 .btn-outline-warning {
@@ -96,9 +98,10 @@ body {
     border-color: var(--secondary-darker);
 }
 
-.btn-outline-warning:hover {
+.btn-outline-warning:hover, .btn-outline-warning:focus-visible {
     color: #fff;
     background-color: var(--secondary-darker);
+    outline: 2px solid var(--secondary-darker);
 }
 
 /* Botón de color fucsia (accent) */
@@ -109,10 +112,11 @@ body {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn-accent:hover {
+.btn-accent:hover, .btn-accent:focus-visible {
     background-color: #d11281; /* Un fucsia un poco más oscuro */
     border-color: #d11281;
     transform: translateY(-2px);
+    outline: 2px solid #d11281;
 }
 
 footer {
@@ -123,8 +127,9 @@ footer .text-white {
     transition: color 0.3s;
 }
 
-footer a.text-white:hover {
+footer a.text-white:hover, footer a.text-white:focus-visible {
     color: #ffffff !important; /* Mantenemos el blanco en hover para máxima legibilidad */
+    text-decoration: underline; /* Subrayado para indicar foco */
 }
 
 /* Estilos para el banner de cookies */
@@ -167,8 +172,15 @@ footer a.text-white:hover {
   transition: background-color 0.3s;
 }
 
-.cookie-btn:hover {
+.cookie-btn:hover, .cookie-btn:focus-visible {
   background-color: #FF4500;
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Estilo de foco para el selector de idioma */
+.dropdown-toggle:focus-visible {
+    box-shadow: 0 0 0 0.25rem var(--primary-darker);
 }
 
 
