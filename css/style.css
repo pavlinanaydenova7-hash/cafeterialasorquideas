@@ -1,10 +1,12 @@
 :root {
-    --primary-color: #FF8C00; /* Naranja oscuro */
-    --secondary-color: #FFD700; /* Amarillo dorado */
+    --primary-color: #FF8C00; /* Naranja original */
+    --primary-darker: #D97300; /* Naranja oscuro para contraste */
+    --secondary-color: #FFD700; /* Amarillo original */
+    --secondary-darker: #E0B800; /* Amarillo oscuro para contraste */
     --accent-color: #FF1493; /* Fucsia */
     --text-color: #333;
     --bg-color: #FFF8E1; /* Crema claro */
-    --forest-green: #228B22;
+    --dark-green: #1A681A; /* Verde oscuro para contraste */
 }
 
 body {
@@ -27,14 +29,14 @@ body {
 }
 
 .nav-link {
-    color: var(--forest-green) !important;
+    color: var(--dark-green) !important;
     font-weight: bold;
     position: relative;
     transition: color 0.3s;
 }
 
 .nav-link:hover, .nav-link.active {
-    color: var(--primary-color) !important;
+    color: var(--primary-darker) !important;
 }
 
 .nav-link::after {
@@ -63,6 +65,8 @@ body {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 20px;
+    /* Sombra para garantizar la legibilidad sobre cualquier imagen */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 /* Ajustes para que el texto del carrusel se vea bien en móviles */
 @media (max-width: 767px) {
@@ -88,13 +92,13 @@ body {
 }
 
 .btn-outline-warning {
-    color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    color: var(--secondary-darker);
+    border-color: var(--secondary-darker);
 }
 
 .btn-outline-warning:hover {
     color: #fff;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-darker);
 }
 
 /* Botón de color fucsia (accent) */
@@ -112,15 +116,15 @@ body {
 }
 
 footer {
-    background: linear-gradient(to right, var(--forest-green), #1a681a);
+    background: linear-gradient(to right, var(--dark-green), #165916);
 }
 
 footer .text-white {
     transition: color 0.3s;
 }
 
-footer .text-white:hover {
-    color: var(--secondary-color) !important;
+footer a.text-white:hover {
+    color: #ffffff !important; /* Mantenemos el blanco en hover para máxima legibilidad */
 }
 
 /* Estilos para el banner de cookies */
@@ -128,8 +132,8 @@ footer .text-white:hover {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  background-color: var(--forest-green);
+  width: 100%;  
+  background-color: var(--dark-green);
   color: white;
   border-top: 2px solid var(--secondary-color);
   text-align: center;
@@ -144,7 +148,7 @@ footer .text-white:hover {
 }
 
 #cookie-banner a {
-  color: var(--secondary-color);
+  color: var(--secondary-darker);
   text-decoration: underline;
 }
 
@@ -193,7 +197,7 @@ footer .text-white:hover {
 }
 
 .service-card .card-title {
-    color: var(--primary-color);
+    color: var(--primary-darker);
 }
 
 /* Estilos para la página de Contacto */
