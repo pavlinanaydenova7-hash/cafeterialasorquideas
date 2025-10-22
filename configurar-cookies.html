@@ -38,17 +38,27 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
-                        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html" data-i18n="nav_about">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html" data-i18n="nav_services">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html" data-i18n="nav_contact">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galeria.html" data-i18n="nav_gallery">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html" data-i18n="nav_menu">Menú</a></li>
                     </ul>
                     <div class="d-flex align-items-center ms-lg-3 mt-2 mt-lg-0">
-                        <span class="me-2">Síguenos:</span>
+                        <span class="me-2" data-i18n="follow_us">Síguenos:</span>
                         <a href="https://www.facebook.com/share/1Si8FLVas2/" target="_blank" class="nav-link me-2"><i class="bi bi-facebook fs-4"></i></a>
                         <a href="#" class="nav-link"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                    <!-- Selector de idioma -->
+                    <div class="dropdown ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="language-switcher" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="language_button">
+                            <i class="bi bi-translate"></i> Idioma
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="language-switcher">
+                            <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -57,26 +67,26 @@
 
     <main class="container my-5">
         <div class="cookie-config-container mx-auto">
-            <h1 class="text-center mb-4">Configuración de Cookies</h1>
-            <p>Puedes elegir qué tipo de cookies permites en este sitio web. Tus preferencias se guardarán para futuras visitas. Las cookies funcionales son necesarias para el correcto funcionamiento del sitio y no se pueden desactivar.</p>
+            <h1 class="text-center mb-4" data-i18n="cookies_config_title">Configuración de Cookies</h1>
+            <p data-i18n="cookies_config_p1">Puedes elegir qué tipo de cookies permites en este sitio web. Tus preferencias se guardarán para futuras visitas. Las cookies funcionales son necesarias para el correcto funcionamiento del sitio y no se pueden desactivar.</p>
             <hr>
             <form id="cookie-form">
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="functional" name="functional" checked disabled>
-                    <label class="form-check-label" for="functional"><strong>Cookies funcionales (Necesarias)</strong></label>
-                    <small class="form-text text-muted d-block">Estas cookies son esenciales para que el sitio web funcione correctamente.</small>
+                    <label class="form-check-label" for="functional"><strong data-i18n="cookies_config_functional_title">Cookies funcionales (Necesarias)</strong></label>
+                    <small class="form-text text-muted d-block" data-i18n="cookies_config_functional_text">Estas cookies son esenciales para que el sitio web funcione correctamente.</small>
                 </div>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="analytics" name="analytics">
-                    <label class="form-check-label" for="analytics"><strong>Cookies analíticas</strong></label>
-                    <small class="form-text text-muted d-block">Nos ayudan a entender cómo los visitantes interactúan con el sitio web, recopilando información de forma anónima.</small>
+                    <label class="form-check-label" for="analytics"><strong data-i18n="cookies_config_analytics_title">Cookies analíticas</strong></label>
+                    <small class="form-text text-muted d-block" data-i18n="cookies_config_analytics_text">Nos ayudan a entender cómo los visitantes interactúan con el sitio web, recopilando información de forma anónima.</small>
                 </div>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="advertising" name="advertising">
-                    <label class="form-check-label" for="advertising"><strong>Cookies de publicidad</strong></label>
-                    <small class="form-text text-muted d-block">Se utilizan para mostrar anuncios relevantes para ti y tus intereses.</small>
+                    <label class="form-check-label" for="advertising"><strong data-i18n="cookies_config_advertising_title">Cookies de publicidad</strong></label>
+                    <small class="form-text text-muted d-block" data-i18n="cookies_config_advertising_text">Se utilizan para mostrar anuncios relevantes para ti y tus intereses.</small>
                 </div>
-                <button type="submit" class="btn btn-primary mt-3">Guardar preferencias</button>
+                <button type="submit" class="btn btn-primary mt-3" data-i18n="cookies_config_save_button">Guardar preferencias</button>
             </form>
         </div>
     </main>
@@ -85,32 +95,14 @@
     <footer class="bg-dark text-white pt-4">
         <div class="container text-center text-md-start">
             <div class="row">
-                <div class="col-md-4 col-lg-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">Cafetería Las Orquídeas</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffc107; height: 2px"/>
-                    <p>Tu lugar de encuentro en Estepona. Desayunos, almuerzos, cenas y el mejor ambiente.</p>
-                </div>
-                <div class="col-md-4 col-lg-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">Contacto</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffc107; height: 2px"/>
-                    <p><i class="bi bi-geo-alt-fill me-3"></i>Calle Salvador Dalí 2, 29680 Estepona, Málaga</p>
-                    <p><i class="bi bi-clock-fill me-3"></i>Todos los días: 8:00 - 1:00</p>
-                    <p><i class="bi bi-envelope-fill me-3"></i>cafeterialasorquideasestepona@gmail.com</p>
-                    <a href="mailto:cafeterialasorquideasestepona@gmail.com" class="btn btn-outline-warning mt-2">Enviar un correo</a>
-                </div>
-                <div class="col-md-4 col-lg-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase fw-bold">Síguenos</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffc107; height: 2px"/>
-                    <a href="https://www.facebook.com/share/1Si8FLVas2/" target="_blank" class="text-white me-4 fs-3"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="text-white fs-3"><i class="bi bi-instagram"></i></a>
-                </div>
+                <!-- El footer completo no es necesario en esta página, solo los enlaces legales -->
             </div>
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2025 Cafetería Las Orquídeas - Todos los derechos reservados.
-            <a class="text-white" href="aviso-legal.html">Aviso Legal</a> |
-            <a class="text-white" href="politica-privacidad.html">Política de Privacidad</a> |
-            <a class="text-white" href="configurar-cookies.html" id="cookie-settings">Configuración de Cookies</a>
+            <span data-i18n="footer_copyright">© 2025 Cafetería Las Orquídeas - Todos los derechos reservados.</span>
+            <a class="text-white" href="aviso-legal.html" data-i18n="footer_legal">Aviso Legal</a> |
+            <a class="text-white" href="politica-privacidad.html" data-i18n="footer_privacy">Política de Privacidad</a> |
+            <a class="text-white" href="configurar-cookies.html" id="cookie-settings" data-i18n="footer_cookies_settings">Configuración de Cookies</a>
         </div>
     </footer>
 

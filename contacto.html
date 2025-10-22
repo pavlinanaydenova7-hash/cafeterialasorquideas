@@ -35,17 +35,27 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
-                        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html" data-i18n="nav_about">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html" data-i18n="nav_services">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contacto.html" data-i18n="nav_contact">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galeria.html" data-i18n="nav_gallery">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html" data-i18n="nav_menu">Menú</a></li>
                     </ul>
                     <div class="d-flex align-items-center ms-lg-3 mt-2 mt-lg-0">
-                        <span class="me-2">Síguenos:</span>
+                        <span class="me-2" data-i18n="follow_us">Síguenos:</span>
                         <a href="https://www.facebook.com/share/1Si8FLVas2/" target="_blank" class="nav-link me-2"><i class="bi bi-facebook fs-4"></i></a>
                         <a href="#" class="nav-link"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                    <!-- Selector de idioma -->
+                    <div class="dropdown ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="language-switcher" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="language_button">
+                            <i class="bi bi-translate"></i> Idioma
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="language-switcher">
+                            <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -54,30 +64,30 @@
 
     <main class="container my-5">
         <div class="text-center mb-5">
-            <h1 class="display-4">Contacto y Ubicación</h1>
-            <p class="lead">Estamos deseando recibirte. ¡Encuéntranos!</p>
+            <h1 class="display-4" data-i18n="contact_title">Contacto y Ubicación</h1>
+            <p class="lead" data-i18n="contact_subtitle">Estamos deseando recibirte. ¡Encuéntranos!</p>
         </div>
 
         <div class="row g-5">
             <div class="col-lg-6">
-                <h3>Nuestra Ubicación</h3>
-                <p>Nos encontramos en un lugar privilegiado de Estepona, justo al lado del famoso Orquidario.</p>
+                <h3 data-i18n="contact_location_title">Nuestra Ubicación</h3>
+                <p data-i18n="contact_location_text">Nos encontramos en un lugar privilegiado de Estepona, justo al lado del famoso Orquidario.</p>
                 <address>
-                    <strong>Cafetería Las Orquídeas</strong><br>
-                    Calle Salvador Dalí, 2<br>
-                    29680 Estepona, Málaga<br>
-                    España
+                    <strong data-i18n="contact_address_title">Cafetería Las Orquídeas</strong><br>
+                    <span data-i18n="contact_address_line1">Calle Salvador Dalí, 2</span><br>
+                    <span data-i18n="contact_address_line2">29680 Estepona, Málaga</span><br>
+                    <span data-i18n="contact_address_line3">España</span>
                 </address>
                 <div id="map"></div>
             </div>
             <div class="col-lg-6">
-                <h3>Envíanos un Mensaje</h3>
-                <p>Para cualquier consulta o reserva, no dudes en contactarnos.</p>
+                <h3 data-i18n="contact_message_title">Envíanos un Mensaje</h3>
+                <p data-i18n="contact_message_text">Para cualquier consulta o reserva, no dudes en contactarnos.</p>
                 <ul class="list-unstyled mb-4">
                     <li><i class="bi bi-envelope-fill me-2"></i>cafeterialasorquideasestepona@gmail.com</li>
-                    <li><i class="bi bi-clock-fill me-2"></i>Abierto de 8:00 a 1:00 todos los días.</li>
+                    <li data-i18n="contact_open_hours"><i class="bi bi-clock-fill me-2"></i>Abierto de 8:00 a 1:00 todos los días.</li>
                 </ul>
-                <a href="mailto:cafeterialasorquideasestepona@gmail.com" class="btn btn-primary btn-lg">
+                <a href="mailto:cafeterialasorquideasestepona@gmail.com" class="btn btn-primary btn-lg" data-i18n="contact_send_email_button">
                     <i class="bi bi-send-fill me-2"></i>Enviar un Correo Electrónico
                 </a>
             </div>
@@ -89,20 +99,20 @@
         <div class="container text-center text-md-start">
             <div class="row">
                 <div class="col-md-4 col-lg-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">Cafetería Las Orquídeas</h6>
+                    <h6 class="text-uppercase fw-bold" data-i18n="footer_title">Cafetería Las Orquídeas</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffc107; height: 2px"/>
-                    <p>Tu lugar de encuentro en Estepona. Desayunos, almuerzos, cenas y el mejor ambiente.</p>
+                    <p data-i18n="footer_description">Tu lugar de encuentro en Estepona. Desayunos, almuerzos, cenas y el mejor ambiente.</p>
                 </div>
                 <div class="col-md-4 col-lg-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold">Contacto</h6>
+                    <h6 class="text-uppercase fw-bold" data-i18n="footer_contact_title">Contacto</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffc107; height: 2px"/>
-                    <p><i class="bi bi-geo-alt-fill me-3"></i>Calle Salvador Dalí 2, 29680 Estepona, Málaga</p>
-                    <p><i class="bi bi-clock-fill me-3"></i>Todos los días: 8:00 - 1:00</p>
+                    <p data-i18n="footer_contact_address"><i class="bi bi-geo-alt-fill me-3"></i>Calle Salvador Dalí 2, 29680 Estepona, Málaga</p>
+                    <p data-i18n="footer_contact_hours"><i class="bi bi-clock-fill me-3"></i>Todos los días: 8:00 - 1:00</p>
                     <p><i class="bi bi-envelope-fill me-3"></i>cafeterialasorquideasestepona@gmail.com</p>
-                    <a href="mailto:cafeterialasorquideasestepona@gmail.com" class="btn btn-outline-warning mt-2">Enviar un correo</a>
+                    <a href="mailto:cafeterialasorquideasestepona@gmail.com" class="btn btn-outline-warning mt-2" data-i18n="footer_contact_email_button">Enviar un correo</a>
                 </div>
                 <div class="col-md-4 col-lg-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase fw-bold">Síguenos</h6>
+                    <h6 class="text-uppercase fw-bold" data-i18n="footer_follow_title">Síguenos</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #ffc107; height: 2px"/>
                     <a href="https://www.facebook.com/share/1Si8FLVas2/" target="_blank" class="text-white me-4 fs-3"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="text-white fs-3"><i class="bi bi-instagram"></i></a>
@@ -110,10 +120,10 @@
             </div>
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2025 Cafetería Las Orquídeas - Todos los derechos reservados.
-            <a class="text-white" href="aviso-legal.html">Aviso Legal</a> |
-            <a class="text-white" href="politica-privacidad.html">Política de Privacidad</a> |
-            <a class="text-white" href="configurar-cookies.html" id="cookie-settings">Configuración de Cookies</a>
+            <span data-i18n="footer_copyright">© 2025 Cafetería Las Orquídeas - Todos los derechos reservados.</span>
+            <a class="text-white" href="aviso-legal.html" data-i18n="footer_legal">Aviso Legal</a> |
+            <a class="text-white" href="politica-privacidad.html" data-i18n="footer_privacy">Política de Privacidad</a> |
+            <a class="text-white" href="configurar-cookies.html" id="cookie-settings" data-i18n="footer_cookies_settings">Configuración de Cookies</a>
         </div>
     </footer>
 

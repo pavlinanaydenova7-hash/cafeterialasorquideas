@@ -139,6 +139,10 @@ footer .text-white:hover {
   display: none; /* oculto por defecto hasta que main.js lo muestre */
 }
 
+.cookie-text a {
+  margin-left: 5px;
+}
+
 #cookie-banner a {
   color: var(--secondary-color);
   text-decoration: underline;
