@@ -1,0 +1,6 @@
+# Permitir a todos los rastreadores web acceder a todo el sitio.
+User-agent: *
+Allow: /
+
+# Ubicación del sitemap
+Sitemap: https://cafeterialasorquideasestepona.pages.dev/sitemap.xml
